@@ -1,0 +1,59 @@
+{
+    "panels": [
+        {
+            "id": 1,
+            "name":"priFlat",
+            "quantity": 10,
+            "price": 69
+        },
+        {
+            "id": 2,
+            "name":"priFlat Duo",
+            "quantity": 5,
+            "price": 111
+        },
+        {
+            "id": 3,
+            "name":"priFlat Trio",
+            "quantity": 3,
+            "price": 232
+        },
+        {
+            "id": 4,
+            "name":"priRoof",
+            "quantity": 15,
+            "price": 87
+        },
+        {
+            "id": 5,
+            "name":"priRoof Duo",
+            "quantity": 13,
+            "price": 25
+        },
+        {
+            "id": 6,
+            "name":"priBalcony",
+            "quantity": 23,
+            "price": 83
+        },
+        {
+            "id": 7,
+            "name":"priBasic",
+            "quantity": 21,
+            "price": 74
+        },
+        {
+            "id": 8,
+            "name":"priWall",
+            "quantity": 36,
+            "price": 132
+        },
+        {
+            "id": 9,
+            "name":"priWall Duo",
+            "quantity": 2,
+            "price": 55
+        }
+
+    ]
+}
