@@ -3,13 +3,13 @@
     {
       "id": 1,
       "name": "priFlat",
-      "quantity": 5,
+      "quantity": 15,
       "price": 69
     },
     {
       "id": 2,
       "name": "priFlat Duo",
-      "quantity": 7,
+      "quantity": 23,
       "price": 111
     },
     {
@@ -27,7 +27,7 @@
     {
       "id": 5,
       "name": "priRoof Duo",
-      "quantity": 13,
+      "quantity": 17,
       "price": 25
     },
     {
