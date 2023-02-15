@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-// import {toggleModal,orderName,orderQuantity,totalCost,available,id as itemId} from '../orderModal/OrderModalSlice'
 import { toggleModal, panelData } from "../orderModal/OrderModalSlice";
 
 import "./ProductItem.sass";
@@ -12,8 +11,9 @@ function ProductItem({id, name, quantity, price}: {
     quantity: number;
     price: number;
 }) {
-    const [quantityInp, setQuantityInp]: any[] = useState("");
 
+
+    const [quantityInp, setQuantityInp]: any[] = useState("");
     const dispatch = useDispatch();
 
     const onInputChange = (e: any) => {
@@ -38,8 +38,11 @@ function ProductItem({id, name, quantity, price}: {
             })
         );
         setQuantityInp("");
+
     };
 
+    const disableBtn = +quantityInp <= 0 || +quantityInp > quantity;
+    const outlineInput = quantityInp === 0 || quantityInp > quantity ? true : false
     return (
         <li className="product-item">
             <div className="product-item__wrapper">
@@ -51,6 +54,7 @@ function ProductItem({id, name, quantity, price}: {
                 <div className="product-item__price">{`${price}$`}</div>
                 <div className="product-item__buy">
                     <input
+                        style={disableBtn && outlineInput ? {outline:'solid red 1px'} : {}}
                         className="product-item__input"
                         type="number"
                         placeholder="Quantity"
@@ -69,6 +73,7 @@ function ProductItem({id, name, quantity, price}: {
                                 quantity - quantityInp
                             )
                         }
+                        disabled={disableBtn}
                         className="product-item__btn"
                     >
                         Add to cart

@@ -10,5 +10,3 @@ For installing make next steps:
 ### `npm i`
 
 ### `npm start`
-
-

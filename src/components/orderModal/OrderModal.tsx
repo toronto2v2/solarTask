@@ -3,19 +3,27 @@ import { useState, useEffect } from "react";
 import { createSelector } from "@reduxjs/toolkit";
 
 import {toggleModal,panelData,} from "./OrderModalSlice";
-import { addNewPurchase } from "../basket/BasketSlice";
-
+import { addNewPurchase, selectAll as selectAllCourtItems } from "../basket/BasketSlice";
 import {quantityUpdated,selectAll,} from "../productsSection/productsSectionSlice";
-import { selectAll as selectAllCourtItems } from "../basket/BasketSlice";
+import { useHttp } from "../../hooks/http.hook";
 import "./OrderModal.sass";
+
+
+
+
+
 
 function OrderModal() {
 
     const [inputValue, setInputValue] = useState("");
     const dispatch = useDispatch();
+    const {request} = useHttp();
 
-    const panelSelector: any = createSelector(selectAll, selectAllCourtItems, (panelsArr, courtItems) => {
-        return { panelsArr, courtItems };
+    const panelSelector: any = createSelector(
+        selectAll,
+        selectAllCourtItems, 
+        (panelsArr, courtItems) => {
+            return { panelsArr, courtItems };
     });
     const getPanelsArr: any = useSelector(panelSelector);
     const panelState = useSelector(((state:any) => state.modal));
@@ -25,7 +33,6 @@ function OrderModal() {
 
     useEffect(() => {
         setInputValue(orderQuantity);
-        console.log(`render`);
     }, [orderQuantity]);
 
 
@@ -51,6 +58,10 @@ function OrderModal() {
             totalCost: cost
         }))
         dispatch(toggleModal())
+
+        request(`http://localhost:3001/panels/${id}`, 
+                'PATCH', 
+                JSON.stringify({quantity:available}))
     };
 
     const onInputChange = (e: any) => {

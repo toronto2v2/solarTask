@@ -1,13 +1,12 @@
 import { Link } from 'react-router-dom';
 import { selectAll as courtData } from '../../components/basket/BasketSlice';
-import { useDispatch,useSelector } from 'react-redux';
+import {useSelector } from 'react-redux';
 import { createSelector } from "@reduxjs/toolkit";
 
 import './CourtPage.sass';
 
 const CourtPage = () => {
 
-    const dispatch = useDispatch();
     const courtSelector: any = createSelector(
         courtData,
         (getAllCourtData) => {

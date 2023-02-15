@@ -1,7 +1,7 @@
 
 export const useHttp = () => {
 
-    const request = async (url:string, method = 'GET', body = null, headers = {'Content-Type': 'application/json'}) => {
+    const request = async (url:string, method = 'GET', body:any = null, headers = {'Content-Type': 'application/json'}) => {
 
 
         try {

@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import {useEffect} from 'react'
 import { selectAll } from '../basket/BasketSlice';
 import { createSelector } from '@reduxjs/toolkit';
 import { useSelector } from 'react-redux';
@@ -7,6 +6,8 @@ import { useSelector } from 'react-redux';
 
 import './Basket.sass';
 import basket from '../../assets/basket.svg'
+
+
 function Basket () {
 
 
@@ -24,6 +25,8 @@ function Basket () {
     const totalPrice = getPanelsArr.courtArr.reduce((acc:number, next: any) => {
         return acc + next.totalCost
     },0)
+
+
     return (
         <div className="basket">
             <Link to="/court">

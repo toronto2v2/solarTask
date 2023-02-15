@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchPanels, selectAll } from "./productsSectionSlice";
 import { createSelector } from "@reduxjs/toolkit";
@@ -9,7 +9,6 @@ import ProductItem from "../productItem/ProductItem";
 import "./ProductsSection.sass";
 
 function ProductsSection() {
-
     const dispatch = useDispatch<AppDispatch>();
     const { panelLoadingStatus } = useSelector((state: any) => state.panels);
 

@@ -21,11 +21,6 @@ const OrderModalSlice = createSlice ({
                                     state.totalCost = action.payload.totalCost;
                                     state.available = action.payload.available;
                                     state.price = action.payload.price},
-        // id: (state, action) => {state.id = action.payload},
-        // orderName: (state,action) => {state.orderName = action.payload},
-        // orderQuantity: (state,action) => {state.orderQuantity = action.payload},
-        // totalCost: (state,action) => {state.totalCost = action.payload},
-        // available: (state,action) => {state.available = action.payload}
     },
 
 })
@@ -37,10 +32,5 @@ export default reducer;
 export const {
     toggleModal,
     panelData
-    // id,
-    // orderName,
-    // orderQuantity,
-    // totalCost,
-    // available
 } = actions;
 
