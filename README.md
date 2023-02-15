@@ -3,7 +3,7 @@
 
 For installing make next steps:
 
-### `npm clone https://github.com/toronto2v2/solarTask.git`
+### `git clone https://github.com/toronto2v2/solarTask.git`
 
 ### `cd solarTask`
 
