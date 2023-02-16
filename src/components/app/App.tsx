@@ -8,7 +8,7 @@ import './App.sass';
 
 import OrderModal from '../orderModal/OrderModal';
 
-function App() {
+const App = () => {
   return (
         <div className="App">
             <Routes>

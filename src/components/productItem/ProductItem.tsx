@@ -5,12 +5,12 @@ import { toggleModal, panelData } from "../orderModal/OrderModalSlice";
 import "./ProductItem.sass";
 import panel from "../../assets/panel.png";
 
-function ProductItem({id, name, quantity, price}: {
+const ProductItem = ({id, name, quantity, price}: {
     id: string | number;
     name: string;
     quantity: number;
     price: number;
-}) {
+}) => {
 
 
     const [quantityInp, setQuantityInp]: any[] = useState("");

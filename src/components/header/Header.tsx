@@ -3,7 +3,7 @@ import './Header.sass';
 import logo from '../../assets/logo.png';
 import Basket from '../basket/Basket';
 
-function Header () {
+const Header = () => {
 
 
     return (

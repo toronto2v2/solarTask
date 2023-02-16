@@ -13,6 +13,7 @@ const CourtPage = () => {
             return {getAllCourtData}
         }
     )
+    
     const getCourtsArr: any = useSelector(courtSelector);
 
 

@@ -8,7 +8,7 @@ import './Basket.sass';
 import basket from '../../assets/basket.svg'
 
 
-function Basket () {
+const Basket = () =>  {
 
 
     const headerSelector: any = createSelector(selectAll, (courtArr) => {

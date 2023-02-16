@@ -5,7 +5,7 @@ import './MainSection.sass'
 
 
 
-function MainSection () {
+const MainSection = () => {
 
 
 

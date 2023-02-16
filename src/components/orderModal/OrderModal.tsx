@@ -13,7 +13,7 @@ import "./OrderModal.sass";
 
 
 
-function OrderModal() {
+const OrderModal = () => {
 
     const [inputValue, setInputValue] = useState("");
     const dispatch = useDispatch();
